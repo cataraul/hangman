@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/hangman.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Hangman</title>
+</head>
+<body>
+    <!-- <div class="start">
+        <button class="start-button">Start</button>
+    </div> -->
+    <svg height="300" width="400">
+        <g id="body">
+          <g >
+          <circle cx="200" cy="80" r="20" stroke="black" stroke-width="4" id="man-head" class="dissapear" />
+          </g>
+          <line id="man-body" x1="200" y1="100" x2="200" y2="150" class="dissapear"/>
+          <line id="armL" x1="200" y1="120" x2="170" y2="140" class="dissapear dead"/>
+          <line id="armR" x1="200" y1="120" x2="230" y2="140" class="dissapear"/>
+          <line id="legL" x1="200" y1="150" x2="180" y2="190" class="dissapear"/>
+          <line id="legR" x1="200" y1="150" x2="220" y2="190" class="dissapear"/>
+        </g>
+          <line id="baseline" x1="10" y1="250" x2="270" y2="250" class="dissapear"/>
+          <line id="bar" x1="100" y1="250" x2="100" y2="20" class="dissapear"/>
+          <line id="topline" x1="100" y1="20" x2="200" y2="20" class="dissapear"/>
+          <line id="rope" x1="200" y1="20" x2="200" y2="60" class="dissapear"/>
+          
+        </svg>
+        <div class="word">
+            <h1 id="word">
+                <!-- <span class="letter"><button class="letter-button">e</button></span> -->
+            </h1>
+        </div>
+    <div class="keyboard ">
+        <div class="first-row row">
+            
+            <button class="key--letter" data-char="Q">Q</button>
+            <button class="key--letter" data-char="W">W</button>
+            <button class="key--letter" data-char="E">E</button>
+            <button class="key--letter" data-char="R">R</button>
+            <button class="key--letter" data-char="T">T</button>
+            <button class="key--letter" data-char="Y">Y</button>
+            <button class="key--letter" data-char="U">U</button>
+            <button class="key--letter" data-char="I">I</button>
+            <button class="key--letter" data-char="O">O</button>
+            <button class="key--letter" data-char="P">P</button>
+
+        </div>
+        <div class="second-row row">
+            <!-- <button class="half"></button> -->
+            <button class="key--letter" data-char="A">A</button>
+            <button class="key--letter" data-char="S">S</button>
+            <button class="key--letter" data-char="D">D</button>
+            <button class="key--letter" data-char="F">F</button>
+            <button class="key--letter" data-char="G">G</button>
+            <button class="key--letter" data-char="H">H</button>
+            <button class="key--letter" data-char="J">J</button>
+            <button class="key--letter" data-char="K">K</button>
+            <button class="key--letter" data-char="L">L</button>
+            <!-- <button class="half"></button> -->
+        </div>
+        <div class="third-row row">
+            <!-- <button class="half"></button>
+            <button class="half"></button>
+            <button class="half"></button> -->
+
+            <button class="key--letter" data-char="Z">Z</button>
+            <button class="key--letter" data-char="X">X</button>
+            <button class="key--letter" data-char="C">C</button>
+            <button class="key--letter" data-char="V">V</button>
+            <button class="key--letter" data-char="B">B</button>
+            <button class="key--letter" data-char="N">N</button>
+            <button class="key--letter" data-char="M">M</button>
+            <!-- <button class="half"></button> -->
+
+        </div>
+   
+    </div>
+    <h3 id="tries-left-header"></h3>
+    <div class="modal-win modal">
+        <div class="title">
+            <h2>Congratulations, you guessed the word in <span id="tries-needed" class="span-style"></span> tries!</h2>
+        </div>
+        <footer>
+
+            <button class="restart">Play again</button>
+        </footer>
+    </div>
+    <div class="modal-lose modal">
+        
+        <div class="title">
+            <h2>Unfortunately, you lost.</h2>
+            <p>The word was: <span id="game-lost-word" class="span-style"></span> </p>
+        </div>
+        <footer>
+
+            <button class="restart">Play again</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

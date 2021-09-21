@@ -1,0 +1,15 @@
+1.On page load create random word.
+    Display each letters border.
+2.On every letter-button click,disable button and:
+    -create a new array(guessed word) made out of every correct letter pressed;
+    -verify:
+     if(letter is in word)
+        -display letter
+        if( guessedWord and randomWord are equal show the winning modal )
+     else if(letter is not in the word)
+        -decrease the count number(how many tries are left)
+        -show a part of the hangman svgs
+        if there are 10 mistakes, show the man hanging and the modal with the message.
+
+
+    
