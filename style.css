@@ -252,11 +252,18 @@ h3 span{
     .word{
         width:100%;
     }
+    .word h1, .letter-button{
+        font-size:2rem;
+    }
 }
 @media only screen and (max-width:490px){
     .modal{
         width:22rem;
         height:25rem;
+    }
+    .word h1, .letter-button{
+        font-size:1.5rem;
+        padding:0.2rem;
     }
 }
 
@@ -271,14 +278,11 @@ h3 span{
     
 }
 
-@media only screen and (max-width:330px){
-    .letter-button{
+@media only screen and (max-width:360px){
+    .word h1, .letter-button{
         font-size:1.2rem;
-        padding:0.1;
+        padding:0.1rem;
     }
-   
-    
-
 }
 
 @media only screen and (max-width:320px){
@@ -286,6 +290,9 @@ h3 span{
         font-size:0.8rem;
         height:2rem;
         width:4rem;
+    }
+    .word h1, .letter-button{
+        padding:0.05rem;
     }
 }
 @media only screen and (max-width:270px){
@@ -300,6 +307,3 @@ h3 span{
     display:none;
 }
 
-.appear{
-    display:block;
-}
